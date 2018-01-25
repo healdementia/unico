@@ -1,0 +1,42 @@
+{
+  "name": "unico",
+  "version": "1.0.0",
+  "description": "Unico - Interioe Design Studio",
+  "main": "index.js",
+  "author": "Marina Kuznetsova | @healdementia",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgstore": "^6.1.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.2"
+  }
+}
