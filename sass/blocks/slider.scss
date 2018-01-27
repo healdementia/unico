@@ -1,0 +1,18 @@
+.slider__pic {
+  max-width: unset;
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 1200px) {
+  .slider__pic {
+    height: 400px;
+  }
+}
+
+@media (max-width: 499px) {
+  .slider__pic {
+    max-width: 100%;
+    height: auto;
+  }
+}

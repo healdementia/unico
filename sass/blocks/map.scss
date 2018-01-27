@@ -1,0 +1,48 @@
+.map {
+  position: relative;
+  height: 432px;
+  padding: 0;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.map > iframe {
+  filter: grayscale(100%);
+}
+
+.map__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.map__info {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 698px;
+  width: 285px;
+  padding: 25px 30px 22px 52px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  background-color: #ffffff;
+  background-image: url("../img/icon-placeholder.svg");
+  background-repeat: no-repeat;
+  background-position: 24px 21px;
+  background-size: 17px 18px;
+  z-index: 99;
+}
+
+.map__caption {
+  font-family: $semibold-font;
+}
+
+.map__text {
+  margin-bottom: 0;
+  font-family: $light-font;
+}

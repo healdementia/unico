@@ -19,7 +19,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("sprite", function() {
-  return gulp.src("img/sprite-*.svg")
+  return gulp.src("img/{icon-stages-*,icon-top-*}.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))

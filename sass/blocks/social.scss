@@ -1,0 +1,38 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 119px;
+}
+
+.social__link {
+  display: block;
+  width: 17px;
+  height: 16px;
+  background-image: url("../img/icon-instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &--instagram {
+    background-image: url("../img/icon-instagram.svg");
+  }
+
+  &--facebook {
+    width: 20px;
+    height: 17px;
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--vkontakte {
+    width: 12px;
+    height: 15px;
+    background-image: url("../img/icon-vkontakte.svg");
+  }
+
+  &--telegram {
+    width: 18px;
+    height: 15px;
+    background-image: url("../img/icon-telegram.svg");
+  }
+}

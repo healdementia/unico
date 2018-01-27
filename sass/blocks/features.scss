@@ -1,0 +1,72 @@
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid #e3e3e5;
+}
+
+.features__item {
+  min-height: 40px;
+  padding-left: 58px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $italic-font;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &--designer {
+    background-image: url("../img/icon-designer.svg");
+    background-size: 41px auto;
+  }
+
+  &--contract {
+    padding-left: 53px;
+    background-image: url("../img/icon-contract.svg");
+    background-size: 38px auto;
+  }
+
+  &--payment {
+    padding-left: 52px;
+    background-image: url("../img/icon-payment.svg");
+    background-size: 37px auto;
+  }
+
+  &--builders {
+    padding-left: 51px;
+    background-image: url("../img/icon-builders.svg");
+    background-size: 34px auto;
+  }
+
+  &--deadline {
+    padding-left: 52px;
+    background-image: url("../img/icon-deadline.svg");
+    background-size: 37px auto;
+  }
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 990px) {
+  .features {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    width: 160px;
+    margin: 0 5px;
+    padding-left: 40px;
+    font-size: 14px;
+    background-position: left center;
+    background-size: 24px auto;
+  }
+}
+
+@media (max-width: 599px) {
+  .features {
+    display: none;
+  }
+}

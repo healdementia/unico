@@ -1,0 +1,25 @@
+.page-footer {
+  min-height: 151px;
+  padding-top: 27px;
+}
+
+.page-footer__copyright {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: $light-font;
+  color: rgba(51, 51, 51, 0.54);
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 1200px) {
+  .page-footer {
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-footer {
+    text-align: center;
+  }
+}
