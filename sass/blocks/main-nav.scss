@@ -1,8 +1,51 @@
 .main-nav {
+  position: relative;
+  background-color: #ffffff;
+  z-index: 3;
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
+    z-index: 99;
+  }
+}
+
+.main-nav__container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
   border-top: 1px solid #e3e3e5;
+}
+
+.main-nav--sticky .main-nav__container {
+  justify-content: space-between;
+  min-height: 67px;
+  border-top: 0;
+}
+
+.main-nav__logo,
+.main-nav__logo-star,
+.main-nav__button {
+  display: none;
+}
+
+.main-nav__button {
+  padding: 11px 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main-nav--sticky .main-nav__logo,
+.main-nav--sticky .main-nav__button {
+  display: block;
+}
+
+.main-nav--sticky .main-nav__link--active::before {
+  display: none;
 }
 
 .main-nav__list {
@@ -46,6 +89,20 @@
   .main-nav__item:last-child {
     padding-right: 0;
   }
+
+  .main-nav--sticky .main-nav__button {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .main-nav__logo-pic {
+    display: none;
+  }
+
+  .main-nav__logo-star {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -62,21 +119,39 @@
   .main-nav__link {
     font-size: 12px;
   }
+
+  .main-nav__logo-star {
+    width: 40px;
+  }
+
+  .main-nav--sticky .main-nav__item {
+    padding-right: 16px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .main-nav--sticky .main-nav__link {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 499px) {
   .main-nav {
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 0;
     display: none;
     justify-content: flex-start;
+    width: 100%;
     background-color: #ffffff;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   .main-nav__list {
     flex-direction: column;
+    width: 100%;
     padding: 20px;
   }
 
@@ -91,5 +166,13 @@
     &--active::before {
       display: none;
     }
+  }
+
+  .main-nav--sticky .main-nav__container {
+    border-top: 1px solid #e3e3e5;
+  }
+
+  .main-nav--sticky .main-nav__logo {
+    display: none;
   }
 }

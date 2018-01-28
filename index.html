@@ -18,7 +18,7 @@
 
     <header class="page-header" role="banner">
 
-      <div class="back-wrapper">
+      <div class="back-wrapper" id="back-wrapper">
         <div class="container">
           <div class="top">
             <a class="top__logo" href="index.html">
@@ -41,13 +41,16 @@
                 </li>
               </ul>
             </div>
-            <button class="top__open-menu" type="button">
-              <svg class="top__open-pic" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-top-open-menu"></use>
-              </svg>
-            </button>
+            <button class="top__open-menu" id="menu-open" type="button"></button>
           </div>
-          <nav class="main-nav">
+        </div>
+      </div>
+        <nav class="main-nav" id="main-nav">
+          <div class="main-nav__container container">
+            <a class="main-nav__logo" href="index.html">
+              <img class="main-nav__logo-pic" src="img/logo.svg" width="141" height="58" alt="">
+              <img class="main-nav__logo-star" src="img/logo-star-only.svg" width="58" height="58" alt="">
+            </a>
             <ul class="main-nav__list list">
               <li class="main-nav__item list__item">
                 <a class="main-nav__link main-nav__link--active" href="#" title="Главная">Главная</a>
@@ -68,9 +71,9 @@
                 <a class="main-nav__link" href="#" title="Контакты">Контакты</a>
               </li>
             </ul>
-          </nav>
-        </div>
-      </div>
+            <button class="main-nav__button button" type="button" id="calculate-button-top">Рассчитать стоимость проекта</button>
+          </div>
+        </nav>
 
       <div class="intro">
         <div class="intro__slider slider">
@@ -92,7 +95,7 @@
         </div>
         <div class="intro__container container">
           <div class="intro__cta">
-            <button class="intro__button button" type="button">Рассчитать стоимость дизайн-проекта</button>
+            <button class="intro__button button" id="calculate-button-intro" type="button">Рассчитать стоимость дизайн-проекта</button>
           </div>
         </div>
       </div>
@@ -272,14 +275,13 @@
               <li class="offer__item">Выбор строительной компании</li>
             </ul>
             <i class="offer__footnote">* - при заказе свыше 100&nbsp;кв.м стоимость рассчитывается индивидуально.</i>
-            <button class="offer__button button" type="button">Рассчитать стоимость дизайн-проекта</button>
+            <button class="offer__button button" id="calculate-button" type="button">Рассчитать стоимость дизайн-проекта</button>
           </div>
         </section>
 
       </div>
 
       <section class="map">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.251018615441!2d53.208918315741805!3d56.875938912276965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e138fb3820344f%3A0x9951d57dfa5bf750!2z0YPQuy4g0KXQvtC70LzQvtCz0L7RgNC-0LLQsCwgMTUsINCY0LbQtdCy0YHQuiwg0YDQtdGB0L_Rg9Cx0LvQuNC60LAg0KPQtNC80YPRgNGC0LjRjywgNDI2MDEx!5e0!3m2!1sru!2sru!4v1516972342592" width="100%" height="432" frameborder="0" style="border:0" allowfullscreen></iframe> -->
         <iframe src="https://snazzymaps.com/embed/43944" width="100%" height="432px" style="border:none;"></iframe>
         <div class="map__container container">
           <div class="map__info">
@@ -295,6 +297,38 @@
       <footer class="page-footer">
         <span class="page-footer__copyright">&copy; Дизайн-студия &laquo;Унико&raquo;, 2018</span>
       </footer>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="overlay-holder" id="overlay-holder">
+      <div class="calculate">
+        <button class="calculate__close" id="calculate-close" type="button"></button>
+        <h2 class="calculate__headline headline">Рассчитать проект</h2>
+        <form class="calculate__form">
+          <div class="calculate__group">
+            <input class="calculate__input" type="text" id="calculate-name" name="name" placeholder="&nbsp;" minlength="2" required>
+            <label class="calculate__label" for="calculate-name">Имя</label>
+          </div>
+          <div class="calculate__group">
+            <input class="calculate__input calculate__input--tel" type="tel" id="calculate-tel" name="tel" placeholder="&nbsp;" minlength="11">
+            <label class="calculate__label calculate__label--tel" for="calculate-tel">+7</label>
+          </div>
+          <div class="calculate__group">
+            <input class="calculate__input" type="email" id="calculate-email" name="email" placeholder="&nbsp;">
+            <label class="calculate__label" for="calculate-email">Ваш e-mail</label>
+          </div>
+          <div class="calculate__group calculate__group--download">
+            <p class="calculate__text">Для того, чтобы мы могли подготовить детальный расчёт, просим вас максимально подробно ответить на все вопросы брифа.</p>
+            <a class="calculate__download" href="#">Скачать бриф</a>
+          </div>
+          <div class="calculate__group calculate__group--upload">
+            <input class="calculate__input visually-hidden" type="file" id="calculate-upload" name="file">
+            <label class="calculate__label calculate__label--upload" for="calculate-upload">Прикрепить бриф</label>
+          </div>
+          <button class="calculate__submit button" type="submit">Рассчитать стоимость дизайн-проекта</button>
+        </form>
+      </div>
     </div>
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
