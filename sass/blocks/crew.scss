@@ -1,0 +1,131 @@
+.crew {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 25px;
+  background-color: #f8f7f5;
+}
+
+.crew__pic {
+  position: absolute;
+  top: -525px;
+  left: 50%;
+}
+
+.crew__headline {
+  margin-bottom: 27px;
+}
+
+.crew__subline {
+  max-width: 800px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.crew__link {
+  font-family: $semibold-font;
+  color: $theme-color;
+  text-decoration: underline;
+}
+
+.crew__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 91px;
+}
+
+.crew__item {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  min-height: 56px;
+  margin-bottom: 55px;
+  margin-right: 126px;
+  padding-left: 78px;
+  font-family: $italic-font;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &--estimate {
+    background-image: url("../img/icon-calculator.svg");
+    background-size: 45px 45px;
+  }
+
+  &--preparation {
+    background-image: url("../img/icon-sketch.svg");
+    background-size: 56px 56px;
+  }
+
+  &--roughing {
+    background-image: url("../img/icon-paint-roller.svg");
+    background-size: 47px 48px;
+  }
+
+  &--finishing {
+    background-image: url("../img/icon-paint-brush.svg");
+    background-size: 53px 53px;
+  }
+
+  &--materials {
+    background-image: url("../img/icon-pantone.svg");
+    background-size: 53px 53px;
+  }
+
+  &--control {
+    background-image: url("../img/icon-searching-tool.svg");
+    background-size: 50px 50px;
+  }
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 1200px) {
+  .crew__pic {
+    top: -399px;
+    width: auto;
+    height: 399px;
+  }
+
+  .crew__item {
+    margin-right: 52px;
+  }
+}
+
+@media (max-width: 990px) {
+  .crew__list {
+    justify-content: space-around;
+    margin-top: 48px;
+  }
+
+  .crew__item {
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crew__pic {
+    left: 10px;
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 599px) {
+  .crew__pic {
+    top: -230px;
+    left: 0;
+    right: 0;
+    height: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 499px) {
+  .crew__pic {
+    opacity: 1;
+  }
+
+  .crew__item {
+    margin-bottom: 36px;
+  }
+}

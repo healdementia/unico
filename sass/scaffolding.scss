@@ -8,7 +8,6 @@ body {
   height: 100%;
   font-size: 16px;
   line-height: 22px;
-  letter-spacing: 0.4px;
   font-family: $basic-font;
   color: $text-color;
   background-color: #ffffff;
@@ -36,6 +35,12 @@ a {
   &[href^="tel"] {
     color: inherit;
     text-decoration: inherit;
+  }
+
+  &:not([class]) {
+    color: $theme-color;
+    text-decoration: underline;
+    font-family: $semibold-font;
   }
 }
 

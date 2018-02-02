@@ -45,35 +45,36 @@
           </div>
         </div>
       </div>
-        <nav class="main-nav" id="main-nav">
-          <div class="main-nav__container container">
-            <a class="main-nav__logo" href="index.html">
-              <img class="main-nav__logo-pic" src="img/logo.svg" width="141" height="58" alt="">
-              <img class="main-nav__logo-star" src="img/logo-star-only.svg" width="58" height="58" alt="">
-            </a>
-            <ul class="main-nav__list list">
-              <li class="main-nav__item list__item">
-                <a class="main-nav__link main-nav__link--active" href="#" title="Главная">Главная</a>
-              </li>
-              <li class="main-nav__item list__item">
-                <a class="main-nav__link" href="#" title="О нас">О нас</a>
-              </li>
-              <li class="main-nav__item list__item">
-                <a class="main-nav__link" href="#" title="Блог">Блог</a>
-              </li>
-              <li class="main-nav__item list__item">
-                <a class="main-nav__link" href="#" title="Услуги">Услуги</a>
-              </li>
-              <li class="main-nav__item list__item">
-                <a class="main-nav__link" href="#" title="Портфолио">Портфолио</a>
-              </li>
-              <li class="main-nav__item list__item">
-                <a class="main-nav__link" href="#" title="Контакты">Контакты</a>
-              </li>
-            </ul>
-            <button class="main-nav__button button" type="button" id="calculate-button-top">Рассчитать стоимость проекта</button>
-          </div>
-        </nav>
+
+      <nav class="main-nav" id="main-nav" role="navigation">
+        <div class="main-nav__container container">
+          <a class="main-nav__logo" href="index.html">
+            <img class="main-nav__logo-pic" src="img/logo.svg" width="141" height="58" alt="">
+            <img class="main-nav__logo-star" src="img/logo-star-only.svg" width="58" height="58" alt="">
+          </a>
+          <ul class="main-nav__list list">
+            <li class="main-nav__item list__item">
+              <a class="main-nav__link main-nav__link--active" href="#" title="Главная">Главная</a>
+            </li>
+            <li class="main-nav__item list__item">
+              <a class="main-nav__link" href="about.html" title="О нас">О нас</a>
+            </li>
+            <li class="main-nav__item list__item">
+              <a class="main-nav__link" href="blog.html" title="Блог">Блог</a>
+            </li>
+            <li class="main-nav__item list__item">
+              <a class="main-nav__link" href="services.html" title="Услуги">Услуги</a>
+            </li>
+            <li class="main-nav__item list__item">
+              <a class="main-nav__link" href="portfolio.html" title="Портфолио">Портфолио</a>
+            </li>
+            <li class="main-nav__item list__item">
+              <a class="main-nav__link" href="contact.html" title="Контакты">Контакты</a>
+            </li>
+          </ul>
+          <button class="main-nav__button button" type="button" id="calculate-button-top">Рассчитать стоимость проекта</button>
+        </div>
+      </nav>
 
       <div class="intro">
         <div class="intro__slider slider">
@@ -122,13 +123,13 @@
 
     </header>
 
-    <main class="page-main">
+    <main class="page-main" role="main">
 
       <h1 class="visually-hidden">Unico: дизайн интерьеров в Ижевске</h1>
 
       <div class="container">
 
-        <section class="about">
+        <section class="about" role="region" aria-label="О дизайн-студии Унико">
           <h2 class="about__headline headline">О нас</h2>
           <div class="about__top">
             <div class="about__description">
@@ -143,8 +144,8 @@
           </div>
           <cite class="about__cite cite">Воплощаем интерьеры. Освобождаем ваше время. <br>
   Решаем интерьерные, стилевые и функциональные задачи. <br>Оснащаем объекты любым техническим наполнением.</cite>
-          <div class="about__bottom">
-            <ul class="about__stages stages list">
+          <div class="about__bottom stages">
+            <ul class="about__stages stages__list list">
               <li class="stages__item list__item">
                 <img class="stages__square-bg" src="img/square-bg.svg" width="286" height="286" alt="">
                 <div class="stages__contents">
@@ -223,7 +224,7 @@
           </div>
         </section>
 
-        <section class="cost">
+        <section class="cost" role="region" aria-label="Дизайн интерьеров: цены студии Унико">
           <h2 class="cost__headline headline">Стоимость проекта</h2>
           <div class="cost__plans">
             <div class="cost__plan">
@@ -264,7 +265,7 @@
           </div>
         </section>
 
-        <section class="offer">
+        <section class="offer" role="region" aria-label="Специальное предложение">
           <img class="offer__pic" src="img/offer-star.png" width="573" height="543" alt="">
           <div class="offer__contents">
             <h2 class="offer__headline headline">Спецпредложение</h2>
@@ -281,7 +282,7 @@
 
       </div>
 
-      <section class="map">
+      <section class="map" role="region" aria-label="Карта с расположением студии">
         <iframe src="https://snazzymaps.com/embed/43944" width="100%" height="432px" style="border:none;"></iframe>
         <div class="map__container container">
           <div class="map__info">
@@ -294,7 +295,7 @@
     </main>
 
     <div class="container">
-      <footer class="page-footer">
+      <footer class="page-footer" role="contentinfo">
         <span class="page-footer__copyright">&copy; Дизайн-студия &laquo;Унико&raquo;, 2018</span>
       </footer>
     </div>
@@ -305,7 +306,7 @@
       <div class="calculate">
         <button class="calculate__close" id="calculate-close" type="button"></button>
         <h2 class="calculate__headline headline">Рассчитать проект</h2>
-        <form class="calculate__form">
+        <form class="calculate__form" role="form">
           <div class="calculate__group">
             <input class="calculate__input" type="text" id="calculate-name" name="name" placeholder="&nbsp;" minlength="2" required>
             <label class="calculate__label" for="calculate-name">Имя</label>

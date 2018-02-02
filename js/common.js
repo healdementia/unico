@@ -1,17 +1,3 @@
-$('.slider').slick({
-  dots: true
-});
-
-document.getElementById('calculate-button').onclick = function() {
-  document.getElementById('overlay').classList.add('display-block');
-  document.getElementById('overlay-holder').classList.add('display-flex');
-}
-
-document.getElementById('calculate-close').onclick = function() {
-  document.getElementById('overlay').classList.remove('display-block');
-  document.getElementById('overlay-holder').classList.remove('display-flex');
-};
-
 window.onscroll = function() {
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
   if (scrolled >= 160) {
@@ -27,3 +13,17 @@ document.getElementById('menu-open').onclick = function() {
   document.getElementById('main-nav').classList.toggle('display-flex');
   document.getElementById('menu-open').classList.toggle('top__open-menu--close')
 };
+
+document.getElementById('calculate-button-top').onclick = function() {
+  document.getElementById('overlay').classList.add('display-block');
+  document.getElementById('overlay-holder').classList.add('display-flex');
+}
+
+document.getElementById('calculate-close').onclick = function() {
+  document.getElementById('overlay').classList.remove('display-block');
+  document.getElementById('overlay-holder').classList.remove('display-flex');
+};
+
+$('.slider').slick({
+  dots: true
+});

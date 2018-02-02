@@ -1,0 +1,35 @@
+.download {
+  padding-top: 47px;
+}
+
+.download__headline {
+  margin-bottom: 35px;
+}
+
+.download__button {
+  margin-right: 72px;
+  margin-bottom: 10px;
+  padding: 14px 43px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 768px) {
+  .download {
+    padding-top: 24px;
+  }
+
+  .download__headline {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 499px) {
+  .download__button {
+    width: 100%;
+  }
+}

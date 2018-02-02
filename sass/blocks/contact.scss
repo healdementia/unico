@@ -1,0 +1,71 @@
+.contact {
+  padding-top: 63px;
+  padding-bottom: 24px;
+}
+
+.contact__headline {
+  margin-bottom: 44px;
+}
+
+.contact__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact__item {
+  width: 320px;
+  margin-bottom: 26px;
+  padding-left: 29px;
+  padding-right: 21px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $light-font;
+  color: $contact-text-color;
+  background-repeat: no-repeat;
+  background-position: left 1px;
+
+  &--location {
+    background-image: url("../img/icon-placeholder.svg");
+    background-size: 18px 18px;
+  }
+
+  &--tel {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 16px 16px;
+  }
+
+  &--telegram {
+    background-image: url("../img/icon-telegram-contact.svg");
+    background-size: 18px 15px;
+  }
+}
+
+.contact__accent {
+  font-family: $semibold-font;
+}
+
+.contact__link {
+  color: $theme-color;
+  text-decoration: underline;
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 990px) {
+  .contact__item {
+    width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 599px) {
+  .contact__item {
+    width: 100%;
+    padding-right: 0;
+  }
+}

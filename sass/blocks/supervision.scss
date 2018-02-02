@@ -1,0 +1,58 @@
+.supervision {
+  padding-top: 72px;
+  padding-bottom: 110px;
+}
+
+.supervision__headline {
+  margin-bottom: 49px;
+}
+
+.supervision__list {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.supervision__item {
+  position: relative;
+  padding-left: 33px;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #404252;
+    border-radius: 50%;
+  }
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 768px) {
+  .supervision__list {
+    width: 100%;
+    columns: 2;
+  }
+}
+
+@media (max-width: 499px) {
+  .supervision {
+    padding-top: 36px;
+    padding-bottom: 250px;
+  }
+
+  .supervision__headline {
+    margin-bottom: 24px;
+  }
+
+  .supervision__list {
+    columns: 1;
+  }
+}

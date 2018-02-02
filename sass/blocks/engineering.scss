@@ -1,0 +1,105 @@
+.engineering {
+  padding-top: 73px;
+}
+
+.engineering__headline {
+  margin-bottom: 35px;
+}
+
+.engineering__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.engineering__item {
+  width: 273px;
+}
+
+.engineering__icon {
+  width: 100%;
+  height: 128px;
+  margin-bottom: 20px;
+  background-color: #f8f7f5;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--electricity {
+    background-image: url("../img/icon-electric-plug.svg");
+    background-size: 63px 63px;
+  }
+
+  &--ventilation {
+    background-image: url("../img/icon-air-conditioner.svg");
+    background-size: 70px 63px;
+  }
+
+  &--water-supply {
+    background-image: url("../img/icon-water.svg");
+    background-size: 57px 57px;
+  }
+
+  &--heating {
+    background-image: url("../img/icon-heating.svg");
+    background-size: 62px 62px;
+  }
+}
+
+.engineering__name {
+  min-height: 42px;
+  margin: 0 0 16px;
+  font-family: $italic-font;
+  font-style: italic;
+}
+
+.engineering__price {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: $bold-font;
+  color: $theme-color;
+}
+
+////// r e s p o n s i v e //////
+
+@media (max-width: 1200px) {
+  .engineering__item {
+    width: 228px;
+  }
+}
+
+@media (max-width: 990px) {
+  .engineering__item {
+    width: 23.5%;
+  }
+
+  .engineering__price {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .engineering__name {
+    min-height: 66px;
+  }
+}
+
+@media (max-width: 768px) {
+  .engineering__item {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+
+  .engineering__name {
+    min-height: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .engineering__item {
+    width: 100%;
+  }
+
+  .engineering__name {
+    min-height: unset;
+  }
+}
