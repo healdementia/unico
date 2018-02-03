@@ -17,11 +17,18 @@ document.getElementById('menu-open').onclick = function() {
 document.getElementById('calculate-button-top').onclick = function() {
   document.getElementById('overlay').classList.add('display-block');
   document.getElementById('overlay-holder').classList.add('display-flex');
+  document.getElementById('html').classList.add('noscroll');
 }
 
 document.getElementById('calculate-close').onclick = function() {
   document.getElementById('overlay').classList.remove('display-block');
   document.getElementById('overlay-holder').classList.remove('display-flex');
+  document.getElementById('html').classList.remove('noscroll');
+};
+
+document.getElementById('calculate-upload').onchange = function(event) {
+  document.getElementById('calculate-upload-label').innerHTML = 'Загрузить другой';
+  document.getElementById('calculate-return').innerHTML = 'загружен файл: ' + this.value.split( '\\' ).pop();
 };
 
 $('.slider').slick({

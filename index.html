@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" id="html">
 
   <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <script src="js/picturefill.js" async></script>
   </head>
 
-  <body>
+  <body id="body">
 
     <header class="page-header" role="banner">
 
@@ -72,7 +72,7 @@
               <a class="main-nav__link" href="contact.html" title="Контакты">Контакты</a>
             </li>
           </ul>
-          <button class="main-nav__button button" type="button" id="calculate-button-top">Рассчитать стоимость проекта</button>
+          <button class="main-nav__button calculate-button button" type="button" id="calculate-button-top">Рассчитать стоимость проекта</button>
         </div>
       </nav>
 
@@ -96,7 +96,7 @@
         </div>
         <div class="intro__container container">
           <div class="intro__cta">
-            <button class="intro__button button" id="calculate-button-intro" type="button">Рассчитать стоимость дизайн-проекта</button>
+            <button class="intro__button calculate-button button" id="calculate-button-intro" type="button">Рассчитать стоимость дизайн-проекта</button>
           </div>
         </div>
       </div>
@@ -276,7 +276,7 @@
               <li class="offer__item">Выбор строительной компании</li>
             </ul>
             <i class="offer__footnote">* - при заказе свыше 100&nbsp;кв.м стоимость рассчитывается индивидуально.</i>
-            <button class="offer__button button" id="calculate-button" type="button">Рассчитать стоимость дизайн-проекта</button>
+            <button class="offer__button calculate-button button" id="calculate-button" type="button">Рассчитать стоимость дизайн-проекта</button>
           </div>
         </section>
 
@@ -308,15 +308,15 @@
         <h2 class="calculate__headline headline">Рассчитать проект</h2>
         <form class="calculate__form" role="form">
           <div class="calculate__group">
-            <input class="calculate__input" type="text" id="calculate-name" name="name" placeholder="&nbsp;" minlength="2" required>
+            <input class="calculate__input" type="text" id="calculate-name" name="name" placeholder="&nbsp;" minlength="2" title="Имя, минимум 2 буквы" required>
             <label class="calculate__label" for="calculate-name">Имя</label>
           </div>
           <div class="calculate__group">
-            <input class="calculate__input calculate__input--tel" type="tel" id="calculate-tel" name="tel" placeholder="&nbsp;" minlength="11">
+            <input class="calculate__input calculate__input--tel" type="tel" id="calculate-tel" name="tel" placeholder="&nbsp;" minlength="11" title="Номер телефона, минимум 11 символов">
             <label class="calculate__label calculate__label--tel" for="calculate-tel">+7</label>
           </div>
           <div class="calculate__group">
-            <input class="calculate__input" type="email" id="calculate-email" name="email" placeholder="&nbsp;">
+            <input class="calculate__input" type="email" id="calculate-email" name="email" placeholder="&nbsp;" title="Электронная почта">
             <label class="calculate__label" for="calculate-email">Ваш e-mail</label>
           </div>
           <div class="calculate__group calculate__group--download">
@@ -324,8 +324,9 @@
             <a class="calculate__download" href="#">Скачать бриф</a>
           </div>
           <div class="calculate__group calculate__group--upload">
-            <input class="calculate__input visually-hidden" type="file" id="calculate-upload" name="file">
-            <label class="calculate__label calculate__label--upload" for="calculate-upload">Прикрепить бриф</label>
+            <input class="calculate__input visually-hidden" type="file" id="calculate-upload" name="file" required>
+            <label class="calculate__label calculate__label--upload" id="calculate-upload-label" for="calculate-upload">Прикрепить бриф</label>
+            <p class="calculate__return" id="calculate-return"></p>
           </div>
           <button class="calculate__submit button" type="submit">Рассчитать стоимость дизайн-проекта</button>
         </form>
