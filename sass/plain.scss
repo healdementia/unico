@@ -23,6 +23,7 @@
   &:hover,
   &:focus {
     background-color: lighten($theme-color, 5%);
+    outline: 0;
     cursor: pointer;
     opacity: 1;
   }

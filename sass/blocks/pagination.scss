@@ -48,6 +48,17 @@
   display: none;
 }
 
+.pagination--inner__list {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.pagination--inner__link {
+  font-size: 22px;
+  font-family: $basic-font;
+  font-style: normal;
+}
+
 ////// r e s p o n s i v e //////
 
 @media (max-width: 990px) {

@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Unico: портфолио</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ekko-lightbox.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
       document.createElement( "picture" );
@@ -85,7 +87,7 @@
           <h2 class="projects__headline headline">Портфолио</h2>
           <div class="projects__list">
             <figure class="projects__item">
-              <a href="#" title="Увеличить фото">
+              <a href="img/about-bg.jpg" data-toggle="lightbox" data-title="3-х комнатная квартира в ЖК Изумруд" data-footer="Квартира была перепланирована. Объединили кухню и гостиную, получив функциональное открытое пространство." data-gallery="projects-gallery">
                 <img class="projects__pic" src="img/project-1.png" width="360" height="196" alt="Перепланировка в 3-комнатной квартире: объединённые кухня и гостиная">
               </a>
               <figcaption class="projects__caption">
@@ -94,7 +96,7 @@
               </figcaption>
             </figure>
             <figure class="projects__item">
-              <a href="#" title="Увеличить фото">
+              <a href="img/gazprom-petrol-station.png" data-toggle="lightbox" data-title="3-х комнатная квартира в ЖК Изумруд" data-footer="Спальная комната в традиционном японском стиле" data-gallery="projects-gallery" title="Увеличить фото">
                 <img class="projects__pic" src="img/project-2.png" width="360" height="196" alt="Спальня в японском стиле">
               </a>
               <figcaption class="projects__caption">
@@ -103,7 +105,7 @@
               </figcaption>
             </figure>
             <figure class="projects__item">
-              <a href="#" title="Увеличить фото">
+              <a href="img/dubai-event.png" data-toggle="lightbox" data-title="3-х комнатная квартира в ЖК Изумруд" data-footer="Санузел" data-gallery="projects-gallery" title="Увеличить фото">
                 <img class="projects__pic" src="img/project-3.png" width="360" height="196" alt="Интерьер санузла">
               </a>
               <figcaption class="projects__caption">
@@ -112,7 +114,7 @@
               </figcaption>
             </figure>
             <figure class="projects__item">
-              <a href="#" title="Увеличить фото">
+              <a href="img/about-bg.jpg" data-toggle="lightbox" data-title="Загородный дом. Кухня-столовая" data-footer="Вид на столовую группу и зону кухни" data-gallery="projects-gallery" title="Увеличить фото">
                 <img class="projects__pic" src="img/project-4.png" width="360" height="196" alt="Кухня-столовая в загородном доме">
               </a>
               <figcaption class="projects__caption">
@@ -121,7 +123,7 @@
               </figcaption>
             </figure>
             <figure class="projects__item">
-              <a href="#" title="Увеличить фото">
+              <a href="img/gazprom-petrol-station.png" data-toggle="lightbox" data-title="Загородный дом. Спальная комната" data-footer="Вариант 2" data-gallery="projects-gallery" title="Увеличить фото">
                 <img class="projects__pic" src="img/project-5.png" width="360" height="196" alt="Спальня в загородном доме">
               </a>
               <figcaption class="projects__caption">
@@ -130,7 +132,7 @@
               </figcaption>
             </figure>
             <figure class="projects__item">
-              <a href="#" title="Увеличить фото">
+              <a href="img/dubai-event.png" data-toggle="lightbox" data-title="Загородный дом" data-footer="Кухня в стиле прованс" data-gallery="projects-gallery" title="Увеличить фото">
                 <img class="projects__pic" src="img/project-6.png" width="360" height="196" alt="Кухня в стиле прованс в загородном доме">
               </a>
               <figcaption class="projects__caption">
@@ -152,6 +154,16 @@
       </footer>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/ekko-lightbox.js" async></script>
+    <script>
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+    </script>
     <script src="js/common.js" async></script>
 
   </body>

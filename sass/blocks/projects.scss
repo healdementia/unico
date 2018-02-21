@@ -52,6 +52,34 @@
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px dotted $theme-color;
+
+  &:hover,
+  &:focus {
+    color: lighten($theme-color, 5%);
+    opacity: 1;
+  }
+}
+
+////// l i g h t b o x //////
+
+.modal-header {
+  flex-direction: row-reverse;
+}
+
+.modal-title {
+  font-size: 1rem;
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.modal-footer {
+  font-size: 13px;
+}
+
+.img-responsive {
+  margin: auto;
 }
 
 ////// r e s p o n s i v e //////

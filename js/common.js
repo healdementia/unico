@@ -14,16 +14,25 @@ document.getElementById('menu-open').onclick = function() {
   document.getElementById('menu-open').classList.toggle('top__open-menu--close')
 };
 
-document.getElementById('calculate-button-top').onclick = function() {
+document.getElementById('calculate-button-top').onclick = function(e) {
   document.getElementById('overlay').classList.add('display-block');
   document.getElementById('overlay-holder').classList.add('display-flex');
   document.getElementById('html').classList.add('noscroll');
+  e.stopPropagation();
 }
 
 document.getElementById('calculate-close').onclick = function() {
   document.getElementById('overlay').classList.remove('display-block');
   document.getElementById('overlay-holder').classList.remove('display-flex');
   document.getElementById('html').classList.remove('noscroll');
+};
+
+document.getElementById('overlay-holder').onclick = function(e) {
+  if (e.target.id !== 'calculate-popup') {
+    document.getElementById('overlay').classList.remove('display-block');
+    document.getElementById('overlay-holder').classList.remove('display-flex');
+    document.getElementById('html').classList.remove('noscroll');
+  }
 };
 
 document.getElementById('calculate-upload').onchange = function(event) {
