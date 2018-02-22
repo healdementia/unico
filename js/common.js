@@ -27,13 +27,15 @@ document.getElementById('calculate-close').onclick = function() {
   document.getElementById('html').classList.remove('noscroll');
 };
 
-document.getElementById('overlay-holder').onclick = function(e) {
-  if (e.target.id !== 'calculate-popup') {
-    document.getElementById('overlay').classList.remove('display-block');
-    document.getElementById('overlay-holder').classList.remove('display-flex');
-    document.getElementById('html').classList.remove('noscroll');
+$(document).mouseup(function(e) {
+  var popup = $('#calculate-popup');
+  if (!popup.is(e.target) &&
+      popup.has(e.target).length === 0) {
+        $('#overlay').removeClass('display-block');
+        $('#overlay-holder').removeClass('display-flex');
+        $('#html').removeClass('noscroll');
   }
-};
+});
 
 document.getElementById('calculate-upload').onchange = function(event) {
   document.getElementById('calculate-upload-label').innerHTML = 'Загрузить другой';
